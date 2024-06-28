@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file.
  *
@@ -28,13 +29,15 @@ get_header(); ?>
 				z-index: 99;
 				transition: 1s all;
 			}
-			
+
 			.favo-anim:hover {
 				transform: rotate(180deg) scale(1.15) !important;
 			}
+
 			.favo-anim {
 				transform: rotate(180deg) scale(1.15) !important;
 			}
+
 			.favo-text {
 				color: #d0810b !important;
 				font-weight: 800;
@@ -53,18 +56,20 @@ get_header(); ?>
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-2 col-4"></div>
-					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								IDIOMAS
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('idiomas')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS IDIOMAS
+								$menus = wp_get_nav_menu_items('idiomas');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
@@ -72,86 +77,96 @@ get_header(); ?>
 					<div class="col-md-2 col-4"></div>
 				</div>
 				<div class="row" style="height: 20vh;">
-					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								BLOG
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('BLOG')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS BLOG
+								$menus = wp_get_nav_menu_items('BLOG');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-2 col-1"></div>
-					<div class="col-md-4 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-4 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								UNIDADES FABRIS
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('UNIDADES')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS UNIDADES
+								$menus = wp_get_nav_menu_items('UNIDADES');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-1 col-4"></div>
 					<div class="col-md-1 col-1"></div>
-					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								QUEM SOMOS
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('QUEM-SOMOS')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS QUEM SOMOS
+								$menus = wp_get_nav_menu_items('QUEM-SOMOS');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="row" style="height: 20vh;">
 					<div class="col-md-2 col-4"></div>
-					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								CONTATO
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('CONTATO')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS CONTATO
+								$menus = wp_get_nav_menu_items('CONTATO');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-2 col-4"></div>
-					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								PRODUTOS
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('PRODUTOS')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS PRODUTOS
+								$menus = wp_get_nav_menu_items('PRODUTOS');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
@@ -162,24 +177,39 @@ get_header(); ?>
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-1 col-4"></div>
-					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont"
-							src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png"
-							alt="" srcset="">
+					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button"
-								data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
-								REDES SOCIAIS
+							<button class="btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+								<?= wp_get_nav_menu_items('REDES-SOCIAIS')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu" style="border: none;">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<?php
+								// LISTAR MENUS REDES SOCIAIS
+								$menus = wp_get_nav_menu_items('REDES-SOCIAIS');
+
+								for ($i = 1; $i < count($menus); $i++) :
+								?>
+									<li><a class="dropdown-item" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
+								<?php endfor; ?>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-2 col-4"></div>
 				</div>
 			</div>
+			<pre>
+			<?php
+			$nomeMenu = wp_get_nav_menu_name('idiomas');
+			// print_r(wp_get_nav_menu_items('idiomas')[0]->post_title);
+
+
+
+			// for ($i=1; $i < count($menus); $i++) { 
+			// 	echo $menus[$i]->post_title.'<br>';
+			// }
+			// 
+			?>
+			</pre>
 		</section>
 
 		<script>
@@ -189,24 +219,24 @@ get_header(); ?>
 
 			// APARECER TEXTO AO LADO DOS FAVOS
 			favos.forEach((x, y) => {
-				x.addEventListener('mouseover', ()=>{
+				x.addEventListener('mouseover', () => {
 					favosText[y].classList.remove('hid-cont');
 					favosText[y].classList.add('animate__fadeInRight', 'animate__animated')
-					x.classList.remove('animate__fadeInDown', 'animate__animated','animate__delay-'+i+'s');
-					setTimeout(()=>{
+					x.classList.remove('animate__fadeInDown', 'animate__animated', 'animate__delay-' + i + 's');
+					setTimeout(() => {
 						x.classList.add('favo-anim');
 					}, 100)
 				})
 			})
 
 			// APARECER FAVOS
-			setTimeout(()=>{
+			setTimeout(() => {
 				i = 1;
-				favos.forEach((x,y) => {
-				x.classList.remove('hid-cont');
-				x.classList.add('animate__fadeInDown', 'animate__animated','animate__delay-'+i+'s');
-				i++;
-			})
+				favos.forEach((x, y) => {
+					x.classList.remove('hid-cont');
+					x.classList.add('animate__fadeInDown', 'animate__animated', 'animate__delay-' + i + 's');
+					i++;
+				})
 
 			}, 2200)
 
@@ -221,17 +251,16 @@ get_header(); ?>
 			// }, 4800)
 
 
-			spacing.forEach((x)=>{
+			spacing.forEach((x) => {
 				// margem noas listas dos favos
 				let fix = 20;
 				let mv = fix;
 				el = x.children[1].children.length;
-				for(let i = 0 ; i < el; i++ ) {
-					x.children[1].children[i].style.marginLeft = mv+'px';
+				for (let i = 0; i < el; i++) {
+					x.children[1].children[i].style.marginLeft = mv + 'px';
 					mv = mv + fix;
 				}
 			})
-
 		</script>
 	</div><!-- .row -->
 </div><!-- #wrapper -->
