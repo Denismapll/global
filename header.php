@@ -30,6 +30,9 @@
 		background-color: #011240 !important;
 		color: aliceblue !important;
 	}
+	body, html {
+		width: 100%;
+	}
 
 	#preloader {
 		height: 100vh;
@@ -37,6 +40,27 @@
 		width: 100%;
 		position: fixed;
 		z-index: 100;
+	}
+
+	:root {
+		--animate-delay: 0.3s;
+	}
+	.dropdown-item {
+		padding: 2px 0;
+	}
+
+	.animate__animated.animate__delay-6s {
+		-webkit-animation-delay: 6s;
+		animation-delay: 6s;
+		-webkit-animation-delay: calc(var(--animate-delay)* 6);
+		animation-delay: calc(var(--animate-delay)* 6);
+	}
+
+	.animate__animated.animate__delay-7s {
+		-webkit-animation-delay: 7s;
+		animation-delay: 7s;
+		-webkit-animation-delay: calc(var(--animate-delay)* 7);
+		animation-delay: calc(var(--animate-delay)* 7);
 	}
 </style>
 
@@ -63,7 +87,8 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-md">
 				<a class="navbar-brand" href="#">
-					<img style="width: 250px;" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>logo-cgg-marcacao.png"
+					<img style="width: 250px;"
+						src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>logo-cgg-marcacao.png"
 						alt="" srcset="">
 				</a>
 			</div>
