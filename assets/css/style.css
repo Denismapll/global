@@ -23,9 +23,9 @@ a {
 }
 
 :root {
-    --animate-delay: 0.3s;
-    --orange-primary: #d0810b;
-    --bg-sblue: #011240;
+    --animate-delay: 0.3s !important;
+    --orange-primary: #d0810b !important;
+    --bg-sblue: #011240 !important;
 }
 
 .bg-sblue {

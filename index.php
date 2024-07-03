@@ -66,14 +66,13 @@ get_header(); ?>
 								<?= wp_get_nav_menu_items('idiomas')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu bg-sblue" style="border: none;">
-								<?php
-								// LISTAR MENUS IDIOMAS
-								$menus = wp_get_nav_menu_items('idiomas');
 
-								for ($i = 1; $i < count($menus); $i++) :
-								?>
-									<li><a class="dropdown-item text-white bg-transparent" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
-								<?php endfor; ?>
+								<li><?php echo do_shortcode('[gt-link lang="pt" label="PORTUGUÊS" widget_look="lang_names"]') ?></li>
+								<li><?php echo do_shortcode('[gt-link lang="en" label="INGLÊS" widget_look="lang_names"]') ?></li>
+								<li><?php echo do_shortcode('[gt-link lang="fr" label="FRANCÊS" widget_look="lang_names"]') ?></li>
+								<li><?php echo do_shortcode('[gt-link lang="es" label="ESPANHOL" widget_look="lang_names"]') ?></li>
+								<?php do_shortcode('[gt-link lang="pt" label="English" widget_look="lang_names"]') ?>
+
 							</ul>
 						</div>
 					</div>
@@ -256,7 +255,7 @@ get_header(); ?>
 
 
 			spacing.forEach((x) => {
-				// margem noas listas dos favos
+				// margem nas listas dos favos
 				let fix = 20;
 				let mv = fix;
 				el = x.children[1].children.length;

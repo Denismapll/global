@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="overflow: hidden;">
 
 	<header id="header" role="banner">
 		<div class="d-flex justify-content-center align-items-center" id="preloader">
@@ -35,9 +35,11 @@
 		<script>
 			window.onload = () => {
 				const preloader = document.getElementById('preloader');
+				const page = document.querySelector('.page');
 
 				const load = setTimeout(() => {
 					preloader.classList.add('animate__animated', 'animate__fadeOut')
+					page.style.overflow = 'auto';
 					setTimeout(() => {
 						document.querySelector("#preloader").remove();
 					}, 700);
@@ -65,7 +67,9 @@
 				position: relative;
 				transform: rotate(180deg) !important;
 			}
-
+			.preloader {
+				z-index: 10;
+			}
 		</style>
 
 		<nav class="navbar navbar-expand-lg">

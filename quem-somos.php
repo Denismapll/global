@@ -46,20 +46,20 @@ get_header(); ?>
 			}
 
 			.expand-menu {
-				animation-name: Expand;
-				animation-duration: 2s;
+				animation-name: Expand1;
+				/* animation-duration: 2s; */
 				transition: 1s all;
 				animation-fill-mode: forwards;
 			}
 
 			.close-menu {
-				animation-name: Close;
-				animation-duration: 2s;
-				transition: 1s all;
+				animation-name: fechar;
+				/* animation-duration: 2s; */
+				transition: 2s all;
 				animation-fill-mode: forwards;
 			}
 
-			@keyframes Expand {
+			@keyframes Expand1 {
 				0% {
 					height: 0;
 				}
@@ -69,7 +69,7 @@ get_header(); ?>
 				}
 			}
 
-			@keyframes Close {
+			@keyframes fechar {
 				0% {
 					height: 80vh;
 				}
@@ -84,13 +84,13 @@ get_header(); ?>
 			}
 		</style>
 
-		<?php get_template_part('content', 'menu');?>
+		<?php get_template_part('content', 'menu'); ?>
 
-		<section style="height: 100vh;">
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
+		<section style="">
+			<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.</h1>
 		</section>
 
 		<script>
@@ -113,7 +113,7 @@ get_header(); ?>
 					x.click()
 				})
 				document.querySelector('body').classList.toggle('o-hidden')
-				window.scrollTo(0,0);
+				window.scrollTo(0, 0);
 
 			})
 
