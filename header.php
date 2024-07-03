@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body <?php body_class(); ?> style="overflow: hidden;">
+<body <?php body_class(); ?>>
 
 	<header id="header" role="banner">
 		<div class="d-flex justify-content-center align-items-center" id="preloader">
@@ -39,7 +39,6 @@
 
 				const load = setTimeout(() => {
 					preloader.classList.add('animate__animated', 'animate__fadeOut')
-					page.style.overflow = 'auto';
 					setTimeout(() => {
 						document.querySelector("#preloader").remove();
 					}, 700);
@@ -56,17 +55,20 @@
 				transform: translate(-50%, 50%);
 				font-weight: 500;
 			}
+
 			.fav-roll-close {
 				transition: 2s all;
 				z-index: 2;
 				position: relative;
 			}
+
 			.fav-roll-open {
 				transition: 2s all;
 				z-index: 2;
 				position: relative;
 				transform: rotate(180deg) !important;
 			}
+
 			.preloader {
 				z-index: 10;
 			}
@@ -74,15 +76,15 @@
 
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-md">
-				<a class="navbar-brand" href="<?= home_url();?>">
+				<a class="navbar-brand" href="<?= home_url(); ?>">
 					<img style="width: 250px;" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>logo-cgg-marcacao.png" alt="" srcset="">
 				</a>
-				<?php if (!is_front_page()):?>
-				<div class="abrir bg-comb position-relative">
-					<img class="fav-roll-close" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
-					<span class="menu" style="z-index: 1;">Menu</span>
-				</div>
-				<?php endif;?>
+				<?php if (!is_front_page()) : ?>
+					<div class="abrir bg-comb position-relative">
+						<img class="fav-roll-close" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
+						<span class="menu" style="z-index: 1;">Menu</span>
+					</div>
+				<?php endif; ?>
 			</div>
 		</nav>
 	</header><!-- #header -->

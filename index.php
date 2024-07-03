@@ -71,7 +71,6 @@ get_header(); ?>
 								<li><?php echo do_shortcode('[gt-link lang="en" label="INGLÊS" widget_look="lang_names"]') ?></li>
 								<li><?php echo do_shortcode('[gt-link lang="fr" label="FRANCÊS" widget_look="lang_names"]') ?></li>
 								<li><?php echo do_shortcode('[gt-link lang="es" label="ESPANHOL" widget_look="lang_names"]') ?></li>
-								<?php do_shortcode('[gt-link lang="pt" label="English" widget_look="lang_names"]') ?>
 
 							</ul>
 						</div>
@@ -267,6 +266,8 @@ get_header(); ?>
 		</script>
 	</div><!-- .row -->
 </div><!-- #wrapper -->
+
+<?php do_shortcode('[gt-link lang="pt" label="English" widget_look="lang_names"]') ?>
 
 <?php
 get_footer();

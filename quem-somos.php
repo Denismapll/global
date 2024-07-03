@@ -86,7 +86,7 @@ get_header(); ?>
 
 		<?php get_template_part('content', 'menu'); ?>
 
-		<section style="">
+		<section>
 			<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aperiam dolores reiciendis necessitatibus aspernatur facilis, officiis illum neque ad, blanditiis sunt illo est accusantium alias laborum, perferendis praesentium amet nobis.
