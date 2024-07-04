@@ -29,7 +29,7 @@ require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
 // require_once get_template_directory() . '/core/classes/class-theme-options.php';
 // require_once get_template_directory() . '/core/classes/class-options-helper.php';
-// require_once get_template_directory() . '/core/classes/class-post-type.php';
+require_once get_template_directory() . '/core/classes/class-post-type.php';
 // require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 // require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
@@ -318,3 +318,24 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/functions.php';
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
+
+function empresas_cpt() {
+    $empresas = new Odin_Post_Type(
+        'Empresas', // Nome (Singular) do Post Type.
+        'Empresas' // Slug do Post Type.
+    );
+
+    $empresas->set_labels(
+        array(
+            'menu_name' => __( 'Minhas Empresass', 'odin' )
+        )
+    );
+
+    $empresas->set_arguments(
+        array(
+            'supports' => array( 'title', 'editor', 'thumbnail' )
+        )
+    );
+}
+
+add_action( 'init', 'empresas_cpt', 1 );

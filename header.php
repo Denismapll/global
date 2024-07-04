@@ -30,7 +30,10 @@
 
 	<header id="header" role="banner">
 		<div class="d-flex justify-content-center align-items-center" id="preloader">
-			<img style="width: 200px;" data-aos="fade-zoom-in" data-aos-duration="2000" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>abelha-cgg.png" alt="" srcset="">
+			<!-- <img style="width: 200px;" data-aos="fade-zoom-in" data-aos-duration="2000" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>abelha-cgg.png" alt="" srcset=""> -->
+			<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+			<dotlottie-player data-aos="fade-zoom-in" data-aos-duration="2000" src="https://lottie.host/f4f0c011-c78f-44a0-b19d-dcc64612b2cd/C2l7ALGkC7.json" background="transparent" speed="1" style="width: 100%; height: 300px;" loop autoplay></dotlottie-player>
 		</div>
 		<script>
 			window.onload = () => {
@@ -40,7 +43,7 @@
 				const load = setTimeout(() => {
 					preloader.classList.add('animate__animated', 'animate__fadeOut')
 					setTimeout(() => {
-						document.querySelector("#preloader").remove();
+						document.querySelector("#preloader").classList.add('d-none')
 					}, 700);
 				}, 2000)
 			}
