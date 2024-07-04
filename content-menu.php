@@ -1,6 +1,6 @@
 		<!-- MENU CUSTOMIZADO -->
 
-		<section class="hid-menu close-menu" style="animation-duration: 2s ;height: 0; overflow: hidden; position: absolute; z-index: 5; background-color: var(--bg-sblue)">
+		<section class="hid-menu close-menu" style="animation-duration: 2s ;height: 0; overflow: hidden; position: absolute; z-index: 5; background-color: var(--bg-sblue); left: 0; right: 0; padding: 0 10vw;">
 			<div class="container m-0">
 				<div class="row" style="height: 20vh;">
 					<div class="col-md-2 col-4"></div>

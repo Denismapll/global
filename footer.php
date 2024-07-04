@@ -12,7 +12,7 @@
 ?>
 
 <footer class="mt-5" role="contentinfo">
-	<section>
+	<section style="position: relative; z-index: 2; background-color: var(--bg-sblue)">
 
 		<div class="container">
 			<div class="row justify-content-between">
