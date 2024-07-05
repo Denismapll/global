@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Quem somos
+ * Template name: Produtos
  *
  */
 
@@ -82,13 +82,15 @@ get_header(); ?>
 			@keyframes movingL {
 				0% {
 					left: -200px;
-					top: 0;					
+					top: 0;
 				}
+
 				50% {
 					left: -220px;
 					top: 15px;
 
 				}
+
 				100% {
 					left: -200px;
 					top: 0;
@@ -121,7 +123,9 @@ get_header(); ?>
 			}
 
 			@media screen and (max-width: 768px) {
-				.bg-bee-grey-right, .bg-bee-grey-left {
+
+				.bg-bee-grey-right,
+				.bg-bee-grey-left {
 					display: none;
 				}
 			}
@@ -130,36 +134,84 @@ get_header(); ?>
 				position: inherit;
 				z-index: 2;
 			}
+
+			/* contato */
+
+			.contato-b {
+				background-color: rgba(5, 5, 43, 1);
+			}
 		</style>
 
 		<?php get_template_part('content', 'menu'); ?>
 
 		<section class="animate__animated animate__fadeInDown animate__delay-7s" style="animation-duration: 0.5s !important">
-			<div class="container position-relative">
-				<div class="row justify-content-center align-items-center content">
-					<div class="col-12">
-						<h5 class="laranja-global text-center">QUEM SOMOS</h5>
-						<h3 class="text-center">COMO ATUAMOS</h3>
+			<h1 class="text-center laranja-global mb-5"><?= get_the_title() ?></h1>
+			<div class="container position-relative m-4">
+				<div class="row">
+					<div class="col-12 contato-b text-center rounded-5 p-3 m-0">
+						<h3 class="m-0">CABOS DE REDE</h3>
 					</div>
-					<div class="col-12 text-center mt-3">
-						<img style="border-radius: 10%; width: 600px;" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-foto.png" alt="" srcset="">
+					<div class="col-12 row justify-content-center gap-4 align-items-center">
+						<div class="col-12 col-md-4">
+							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/cobreflex.png" alt="" srcset="">
+						</div>
+						<div class="col-12 col-md-4">
+							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/conduspar.png" alt="" srcset="">
+						</div>
+						<div class="col-12 col-md-4">
+							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/dipro.png" alt="" srcset="">
+						</div>
 					</div>
-					<div class="col-12 col-md-6 text-center mt-5">
-						<p>SOMOS UM CONGLOMERADO DE EMPRESAS ESPECIALIZADAS NA TECNOLOGIA DE CRIAR E FABRICAR CONDUTORES, QUE TRANSPORTAM ENERGIA ELÉTRICA E INFORMAÇÃO</p>
+					<div class="text-cont m-4">
+						<div class="row justify-content-center">
+							<div class="col-md-10 col-12 m-4">
+								<p class="m-3 text-center">A Cobreflex é uma empresa brasileira com mais de 10 anos de experiência na fabricação de fios e cabos elétricos de alta qualidade, atendendo diretamente aos principais setores. produtos utilizados na geração e transmissão de energia, garantindo segurança e eficiência. </p>
+							</div>
+						</div>
 					</div>
-					<!-- <div class="col-12 text-center">
-						<img style="filter:invert()" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-bottom.png" alt="" srcset="">
-					</div> -->
-				</div>
-				<div class="bg-bee-grey-left">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
-				</div>
-				<div class="bg-bee-grey-right">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
+					<div class="prod-cont m-4">
+						<div class="row">
+							<div class="col-md-4 col-12">
+								<div class="bg-white h-100 d-flex flex-column text-center p-2 rounded-3">
+									<div class="img-prod">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
+									</div>
+									<p class="mb-3"><b class="text-black">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+								</div>
+							</div>
+							<div class="col-md-4 col-12">
+								<div class="bg-white h-100 d-flex flex-column text-center p-2 rounded-3">
+									<div class="img-prod">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
+									</div>
+									<p class="mb-3"><b class="text-black">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+								</div>
+							</div>
+							<div class="col-md-4 col-12">
+								<div class="bg-white h-100 d-flex flex-column text-center p-2 rounded-3">
+									<div class="img-prod">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
+									</div>
+									<p class="mb-3"><b class="text-black">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
+		<style>
+			.img-prod {
+				height: 220px;
+				display: flex;
+				align-items: center;
+			}
+			.img-prod > img {
+				width: 100%;
+				/* object-fit: contain; */
+			}
+		</style>
 		<script>
 			const favos = document.querySelectorAll('.favo');
 			const favosText = document.querySelectorAll('.favo-text');

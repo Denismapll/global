@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Quem somos
+ * Template name: Contato
  *
  */
 
@@ -82,13 +82,15 @@ get_header(); ?>
 			@keyframes movingL {
 				0% {
 					left: -200px;
-					top: 0;					
+					top: 0;
 				}
+
 				50% {
 					left: -220px;
 					top: 15px;
 
 				}
+
 				100% {
 					left: -200px;
 					top: 0;
@@ -121,7 +123,9 @@ get_header(); ?>
 			}
 
 			@media screen and (max-width: 768px) {
-				.bg-bee-grey-right, .bg-bee-grey-left {
+
+				.bg-bee-grey-right,
+				.bg-bee-grey-left {
 					display: none;
 				}
 			}
@@ -130,32 +134,48 @@ get_header(); ?>
 				position: inherit;
 				z-index: 2;
 			}
+
+			/* contato */
+
+			.contato-b {
+				background-color: rgba(5, 5, 43, 1);
+			}
 		</style>
 
 		<?php get_template_part('content', 'menu'); ?>
 
 		<section class="animate__animated animate__fadeInDown animate__delay-7s" style="animation-duration: 0.5s !important">
+			<h1 class="text-center laranja-global mb-5"><?= get_the_title() ?></h1>
 			<div class="container position-relative">
-				<div class="row justify-content-center align-items-center content">
-					<div class="col-12">
-						<h5 class="laranja-global text-center">QUEM SOMOS</h5>
-						<h3 class="text-center">COMO ATUAMOS</h3>
+				<div class="row">
+					<div class="col-md-6 col-12">
+						<div class="row flex-column">
+							<div class="col-12">
+								<div class="col-12 rounded-4 p-4 mt-4 contato-b">
+									<div class="row justify-content-center">
+										<div class="col-7 m-5">
+											<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>logo-cgg-marcacao.png" alt="" srcset="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="col-12 rounded-4 p-4 mt-4 contato-b">
+									<h4 class="laranja-global">ENDEREÇO</h4>
+									<p>Av </p>
+									<h4 class="laranja-global">TELEFONE</h4>
+									<p>11 0000-0000</p>
+									<h4 class="laranja-global">E-MAIL</h4>
+									<p>11 0000-0000</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-12 text-center mt-3">
-						<img style="border-radius: 10%; width: 600px;" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-foto.png" alt="" srcset="">
+					<div class="col-md-6 col-12">
+						<div class="col-12 rounded-4 p-4 mt-4 contato-b h-100 text-center">
+							<h4>NOS ENVIE UMA MENSAGEM</h4>
+						</div>
 					</div>
-					<div class="col-12 col-md-6 text-center mt-5">
-						<p>SOMOS UM CONGLOMERADO DE EMPRESAS ESPECIALIZADAS NA TECNOLOGIA DE CRIAR E FABRICAR CONDUTORES, QUE TRANSPORTAM ENERGIA ELÉTRICA E INFORMAÇÃO</p>
-					</div>
-					<!-- <div class="col-12 text-center">
-						<img style="filter:invert()" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-bottom.png" alt="" srcset="">
-					</div> -->
-				</div>
-				<div class="bg-bee-grey-left">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
-				</div>
-				<div class="bg-bee-grey-right">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
 				</div>
 			</div>
 		</section>

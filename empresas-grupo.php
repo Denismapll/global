@@ -171,7 +171,7 @@ get_header(); ?>
 
 		<?php get_template_part('content', 'menu'); ?>
 
-		<section>
+		<section class="animate__animated animate__fadeInDown animate__delay-7s" style="animation-duration: 0.5s !important">
 			<div class="container position-relative">
 				<div class="row mt-4 justify-content-center align-items-center content">
 					<div class="col-12">

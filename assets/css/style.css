@@ -1,12 +1,19 @@
 ﻿* {
     /* background-color: #011240 !important; */
     color: aliceblue;
+    font-family: "Karla", sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 body, html {
     width: 100%;
     background-color: #011240 !important;
     z-index: -1;
 
+}
+
+font {
+    color: inherit;
 }
 
 a {
