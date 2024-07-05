@@ -7,19 +7,17 @@
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-2 col-4"></div>
 					<div class="col-md-2 col-4 d-flex align-items-center"><img class="favo hid-cont" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>losango-menu-cgg.png" alt="" srcset="">
-						<div class="dropdown">
+					<div class="dropdown">
 							<button class="bg-transparent btn btn-secondary dropdown-toggle favo-text hid-cont" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
 								<?= wp_get_nav_menu_items('idiomas')[0]->post_title ?>
 							</button>
 							<ul class="dropdown-menu bg-sblue" style="border: none;">
-								<?php
-								// LISTAR MENUS IDIOMAS
-								$menus = wp_get_nav_menu_items('idiomas');
 
-								for ($i = 1; $i < count($menus); $i++) :
-								?>
-									<li><a class="dropdown-item text-white bg-transparent" href="<?= $menus[$i]->url ?>"><?= $menus[$i]->post_title; ?></a></li>
-								<?php endfor; ?>
+								<li><?php echo do_shortcode('[gt-link lang="pt" label="PORTUGUÊS" widget_look="lang_names"]') ?></li>
+								<li><?php echo do_shortcode('[gt-link lang="en" label="INGLÊS" widget_look="lang_names"]') ?></li>
+								<li><?php echo do_shortcode('[gt-link lang="fr" label="FRANCÊS" widget_look="lang_names"]') ?></li>
+								<li><?php echo do_shortcode('[gt-link lang="es" label="ESPANHOL" widget_look="lang_names"]') ?></li>
+
 							</ul>
 						</div>
 					</div>
