@@ -142,14 +142,14 @@ get_header(); ?>
 						<h3 class="text-center">COMO ATUAMOS</h3>
 					</div>
 					<div class="col-12 text-center mt-3">
-						<img style="border-radius: 40%" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-foto.png" alt="" srcset="">
+						<img style="border-radius: 10%; width: 600px;" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-foto.png" alt="" srcset="">
 					</div>
 					<div class="col-12 col-md-6 text-center mt-5">
 						<p>SOMOS UM CONGLOMERADO DE EMPRESAS ESPECIALIZADAS NA TECNOLOGIA DE CRIAR E FABRICAR CONDUTORES, QUE TRANSPORTAM ENERGIA ELÉTRICA E INFORMAÇÃO</p>
 					</div>
-					<div class="col-12 text-center">
+					<!-- <div class="col-12 text-center">
 						<img style="filter:invert()" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-bottom.png" alt="" srcset="">
-					</div>
+					</div> -->
 				</div>
 				<div class="bg-bee-grey-left">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
