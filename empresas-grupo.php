@@ -201,7 +201,7 @@ get_header(); ?>
 								<h3 class="laranja-global mb-4"><?= the_title() ?></h3>
 								<img class="w-75 rounded-5" src="<?php the_post_thumbnail_url() ?>" alt="" srcset="">
 								<p class="mt-3" data-aos="fade-down"><?= the_excerpt() ?></p>
-								<a href="<?= the_permalink() ?>"><button type="button" class="btn btn-warning fw-bold text-gray">Veja o Site</button></a>
+								<a href="<?php echo get_post_meta( $post->ID,'site_url', true ); ?>"><button type="button" class="btn btn-warning fw-bold text-gray">Veja o Site</button></a>
 							</div>
 						<?php endwhile;
 					else : ?>
