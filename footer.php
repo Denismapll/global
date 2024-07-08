@@ -44,9 +44,7 @@
 	</section>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<?php if (!is_front_page()) : ?>
 		<script src="<?php echo get_stylesheet_directory_uri() . '/assets/js/' ?>main.js"></script>
-	<?php endif; ?>
 	<script>
 		AOS.init();
 	</script>
