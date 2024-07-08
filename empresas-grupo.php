@@ -150,7 +150,7 @@ get_header(); ?>
 			}
 			.mh {
 				margin: auto;
-				min-height: 550px;
+				min-height: 600px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -196,7 +196,7 @@ get_header(); ?>
 					// Loop de repetição
 					if ($empresas_query->have_posts()) :
 						while ($empresas_query->have_posts()) : $empresas_query->the_post(); ?>
-							<div class="hidden-empresa col-12 col-md-6 text-center  mh" style="overflow: hidden;transition: 1s">
+							<div class="hidden-empresa col-12 col-md-6 text-center mh" style="overflow: hidden;transition: 1s">
 
 								<h3 class="laranja-global mb-4"><?= the_title() ?></h3>
 								<img class="w-75 rounded-5" src="<?php the_post_thumbnail_url() ?>" alt="" srcset="">
