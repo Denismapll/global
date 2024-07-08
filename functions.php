@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Odin functions and definitions.
  *
@@ -16,7 +17,7 @@
 /**
  * Sets content width.
  */
-if ( ! isset( $content_width ) ) {
+if (!isset($content_width)) {
 	$content_width = 600;
 }
 
@@ -31,7 +32,7 @@ require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.p
 // require_once get_template_directory() . '/core/classes/class-options-helper.php';
 require_once get_template_directory() . '/core/classes/class-post-type.php';
 // require_once get_template_directory() . '/core/classes/class-taxonomy.php';
-// require_once get_template_directory() . '/core/classes/class-metabox.php';
+require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
 // require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
@@ -44,38 +45,39 @@ require_once get_template_directory() . '/core/classes/class-post-type.php';
  */
 require_once get_template_directory() . '/core/classes/widgets/class-widget-like-box.php';
 
-if ( ! function_exists( 'odin_setup_features' ) ) {
+if (!function_exists('odin_setup_features')) {
 
 	/**
 	 * Setup theme features.
 	 *
 	 * @since 2.2.0
 	 */
-	function odin_setup_features() {
+	function odin_setup_features()
+	{
 
 		/**
 		 * Add support for multiple languages.
 		 */
-		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
+		load_theme_textdomain('odin', get_template_directory() . '/languages');
 
 		/**
 		 * Register nav menus.
 		 */
 		register_nav_menus(
 			array(
-				'main-menu' => __( 'Main Menu', 'odin' )
+				'main-menu' => __('Main Menu', 'odin')
 			)
 		);
 
 		/*
 		 * Add post_thumbnails suport.
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		/**
 		 * Add feed link.
 		 */
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/**
 		 * Support Custom Header.
@@ -90,7 +92,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			'uploads'       => true,
 		);
 
-		add_theme_support( 'custom-header', $default );
+		add_theme_support('custom-header', $default);
 
 		/**
 		 * Support Custom Background.
@@ -100,12 +102,12 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			'default-image' => '',
 		);
 
-		add_theme_support( 'custom-background', $defaults );
+		add_theme_support('custom-background', $defaults);
 
 		/**
 		 * Support Custom Editor Style.
 		 */
-		add_editor_style( 'assets/css/editor-style.css' );
+		add_editor_style('assets/css/editor-style.css');
 
 		/**
 		 * Add support for infinite scroll.
@@ -118,7 +120,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 				'container'      => 'content',
 				'wrapper'        => false,
 				'render'         => false,
-				'posts_per_page' => get_option( 'posts_per_page' )
+				'posts_per_page' => get_option('posts_per_page')
 			)
 		);
 
@@ -162,34 +164,35 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for custom logo.
 		 *
 		 *  @since Odin 2.2.10
 		 */
-		add_theme_support( 'custom-logo', array(
+		add_theme_support('custom-logo', array(
 			'height'      => 240,
 			'width'       => 240,
 			'flex-height' => true,
-		) );
+		));
 	}
 }
 
-add_action( 'after_setup_theme', 'odin_setup_features' );
+add_action('after_setup_theme', 'odin_setup_features');
 
 /**
  * Register widget areas.
  *
  * @since 2.2.0
  */
-function odin_widgets_init() {
+function odin_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name' => __( 'Main Sidebar', 'odin' ),
+			'name' => __('Main Sidebar', 'odin'),
 			'id' => 'main-sidebar',
-			'description' => __( 'Site Main Sidebar', 'odin' ),
+			'description' => __('Site Main Sidebar', 'odin'),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widgettitle widget-title">',
@@ -198,62 +201,64 @@ function odin_widgets_init() {
 	);
 }
 
-add_action( 'widgets_init', 'odin_widgets_init' );
+add_action('widgets_init', 'odin_widgets_init');
 
 /**
  * Flush Rewrite Rules for new CPTs and Taxonomies.
  *
  * @since 2.2.0
  */
-function odin_flush_rewrite() {
+function odin_flush_rewrite()
+{
 	flush_rewrite_rules();
 }
 
-add_action( 'after_switch_theme', 'odin_flush_rewrite' );
+add_action('after_switch_theme', 'odin_flush_rewrite');
 
 /**
  * Load site scripts.
  *
  * @since 2.2.0
  */
-function odin_enqueue_scripts() {
+function odin_enqueue_scripts()
+{
 	$template_url = get_template_directory_uri();
 
 	// Loads Odin main stylesheet.
-	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
+	wp_enqueue_style('odin-style', get_stylesheet_uri(), array(), null, 'all');
 
 	// jQuery.
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script('jquery');
 
 	// Html5Shiv
-	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+	wp_enqueue_script('html5shiv', $template_url . '/assets/js/html5.js');
+	wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
 
 	// General scripts.
-	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+	if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {
 		// Bootstrap.
-		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
+		wp_enqueue_script('bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true);
 
 		// FitVids.
-		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
+		wp_enqueue_script('fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true);
 
 		// Main jQuery.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+		wp_enqueue_script('odin-main', $template_url . '/assets/js/main.js', array(), null, true);
 	} else {
 		// Grunt main file with Bootstrap, FitVids and others libs.
-		wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
+		wp_enqueue_script('odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true);
 	}
 
 	// Grunt watch livereload in the browser.
 	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
 
 	// Load Thread comments WordPress script.
-	if ( is_singular() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if (is_singular() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
+add_action('wp_enqueue_scripts', 'odin_enqueue_scripts', 1);
 
 /**
  * Odin custom stylesheet URI.
@@ -265,11 +270,12 @@ add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
  *
  * @return string      New URI.
  */
-function odin_stylesheet_uri( $uri, $dir ) {
+function odin_stylesheet_uri($uri, $dir)
+{
 	return $dir . '/assets/css/style.css';
 }
 
-add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
+add_filter('stylesheet_uri', 'odin_stylesheet_uri', 10, 2);
 
 /**
  * Query WooCommerce activation
@@ -278,9 +284,10 @@ add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
  *
  * @return boolean
  */
-if ( ! function_exists( 'is_woocommerce_activated' ) ) {
-	function is_woocommerce_activated() {
-		return class_exists( 'woocommerce' ) ? true : false;
+if (!function_exists('is_woocommerce_activated')) {
+	function is_woocommerce_activated()
+	{
+		return class_exists('woocommerce') ? true : false;
 	}
 }
 
@@ -312,30 +319,59 @@ require_once get_template_directory() . '/inc/template-tags.php';
 /**
  * WooCommerce compatibility files.
  */
-if ( is_woocommerce_activated() ) {
-	add_theme_support( 'woocommerce' );
+if (is_woocommerce_activated()) {
+	add_theme_support('woocommerce');
 	require get_template_directory() . '/inc/woocommerce/hooks.php';
 	require get_template_directory() . '/inc/woocommerce/functions.php';
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
-function empresas_cpt() {
-    $empresas = new Odin_Post_Type(
-        'Empresas', // Nome (Singular) do Post Type.
-        'Empresas' // Slug do Post Type.
-    );
+function empresas_cpt()
+{
+	$empresas = new Odin_Post_Type(
+		'Empresa', // Nome (Singular) do Post Type.
+		'empresas' // Slug do Post Type.
+	);
 
-    $empresas->set_labels(
-        array(
-            'menu_name' => __( 'Minhas Empresass', 'odin' )
-        )
-    );
+	$empresas->set_labels(
+		array(
+			'menu_name' => __('Minhas Empresass', 'odin')
+		)
+	);
 
-    $empresas->set_arguments(
-        array(
-            'supports' => array( 'title', 'editor', 'thumbnail' )
-        )
-    );
+	$empresas->set_arguments(
+		array(
+			'supports' => array('title', 'editor', 'thumbnail')
+		)
+	);
 }
 
-add_action( 'init', 'empresas_cpt', 1 );
+add_action('init', 'empresas_cpt', 1);
+
+require_once get_template_directory() . '/core/classes/class-metabox.php';
+
+
+$empresas = new Odin_Metabox(
+	'empresas', // Slug/ID of the Metabox (Required)
+	'Empresas Config', // Metabox name (Required)
+	'empresas', // Slug of Post Type (Optional)
+	'normal', // Context (options: normal, advanced, or side) (Optional)
+	'high' // Priority (options: high, core, default or low) (Optional)
+);
+
+$empresas->set_fields(
+	array(
+		array(
+			'id'          => 'site_url', // Obrigatório
+			'label'       => __('Url do Site', 'odin'), // Obrigatório
+			'type'        => 'input', // Obrigatório
+			// 'default'     => 'Default text', // Opcional
+			// 'description' => __('Descrition Example', 'odin'), // Opcional
+			'attributes'  => array( // Opcional (atributos para input HTML/HTML5)
+				'type'     => 'text',
+				'required' => 'required',
+				'class'    => 'form-control',
+			)
+		)
+	),
+);
