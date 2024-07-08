@@ -142,7 +142,7 @@ get_header(); ?>
 						<h3 class="text-center">COMO ATUAMOS</h3>
 					</div>
 					<div class="col-12 text-center mt-3">
-						<img style="border-radius: 10%; width: 600px;" src="https://mddweb.com.br/aprova/global/wp-content/uploads/2024/07/cobre.png" alt="" srcset="">
+						<img style="border-radius: 10%; width: 400px;" src="https://mddweb.com.br/aprova/global/wp-content/uploads/2024/07/cobre.png" alt="" srcset="">
 					</div>
 					<div class="col-12 col-md-6 text-center mt-5">
 						<p>SOMOS UM CONGLOMERADO DE EMPRESAS ESPECIALIZADAS NA TECNOLOGIA DE CRIAR E FABRICAR CONDUTORES, QUE TRANSPORTAM ENERGIA ELÉTRICA E INFORMAÇÃO</p>
