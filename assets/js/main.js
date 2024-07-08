@@ -19,3 +19,12 @@ jQuery(document).ready(function($) {
 	$( '.odin-tooltip' ).tooltip();
 
 });
+
+var y = document.querySelectorAll('.dropdown-item.text-white.bg-transparent')
+y.forEach((x)=>{
+    if (x.href == window.location.href) {
+        x.classList.add('text-secondary');
+        x.classList.remove('text-white');
+        x.href = '#';
+    }
+})
