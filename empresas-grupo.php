@@ -205,6 +205,8 @@ get_header(); ?>
 						while ($empresas_query->have_posts()) : $empresas_query->the_post(); ?>
 							<div class="hidden-empresa col-12 col-md-6 text-center mh" style="overflow: hidden;transition: 1s">
 
+								<h1><?php $imgs = get_field("carousel", get_the_ID()); print_r($imgs); ?></h1>
+
 								<h3 class="laranja-global mb-4"><?= the_title() ?></h3>
 								<div class="col-md-8  col-12">
 									<div id="carousel-post<?php echo get_the_ID();?>" class="carousel slide w-100">
