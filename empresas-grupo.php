@@ -153,12 +153,13 @@ get_header(); ?>
 
 			.mh {
 				margin: auto;
-				min-height: 600px;
+				/* min-height: 600px; */
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 			}
+
 			.bg-or {
 				border: 4px solid orange;
 			}
@@ -205,7 +206,36 @@ get_header(); ?>
 							<div class="hidden-empresa col-12 col-md-6 text-center mh" style="overflow: hidden;transition: 1s">
 
 								<h3 class="laranja-global mb-4"><?= the_title() ?></h3>
-								<img class="w-75 bg-or" src="<?php the_post_thumbnail_url() ?>" alt="" srcset="">
+								<div class="col-md-6 col-12">
+									<div id="carousel-post<?php echo get_the_ID();?>" class="carousel slide w-100">
+										<div class="carousel-indicators">
+											<button type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+											<button type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide-to="1" aria-label="Slide 2"></button>
+											<button type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide-to="2" aria-label="Slide 3"></button>
+										</div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img src="<?php the_post_thumbnail_url() ?>" class="d-block w-100" alt="...">
+											</div>
+											<div class="carousel-item">
+												<img src="<?php the_post_thumbnail_url() ?>" class="d-block w-100" alt="...">
+											</div>
+											<div class="carousel-item">
+												<img src="<?php the_post_thumbnail_url() ?>" class="d-block w-100" alt="...">
+											</div>
+										</div>
+										<button class="carousel-control-prev" type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+
+									</div>
+								</div>
+								<!-- <img class="w-75 bg-or" src="<?php the_post_thumbnail_url() ?>" alt="" srcset=""> -->
 								<p class="mt-3" data-aos="fade-down"><?= the_excerpt() ?></p>
 								<a target="_blank" href="<?php echo get_post_meta($post->ID, 'site_url', true); ?>"><button type="button" class="btn btn-warning fw-bold text-gray">Veja o Site</button></a>
 							</div>
