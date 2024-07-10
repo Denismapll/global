@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Quem somos
+ * Template name: Cabos de Rede
  *
  */
 
@@ -105,9 +105,13 @@ get_header(); ?>
 			.bg-bee-grey-left {
 				position: absolute;
 				height: 0;
-				left: -200px;
-				top: 0;
+				left: -100px;
+				bottom: 350px;
 				opacity: 0.1;
+				-moz-transform: scaleX(-1);
+				-o-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				transform: scaleX(-1);
 			}
 
 			.bg-bee-grey-right {
@@ -116,10 +120,6 @@ get_header(); ?>
 				right: -100px;
 				bottom: 350px;
 				opacity: 0.1;
-				-moz-transform: scaleX(-1);
-				-o-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				transform: scaleX(-1);
 			}
 
 			@media screen and (max-width: 768px) {
@@ -134,58 +134,89 @@ get_header(); ?>
 				position: inherit;
 				z-index: 2;
 			}
+
+			/* contato */
+
+			.contato-b {
+				background-color: #1a2952;
+			}
+			.bd-or {
+				border: 5px solid orange;
+			}
 		</style>
 
 		<?php get_template_part('content', 'menu'); ?>
 
-		<section class="animate__animated animate__fadeInDown animate__delay-7s mb-5" style="animation-duration: 0.5s !important">
-			<div class="container position-relative">
-				<div class="row justify-content-center align-items-center content">
-					<div class="col-12">
-						<!-- <h5 class="laranja-global text-center">QUEM SOMOS</h5> -->
-						<h3 class="text-center mb-5">COMO ATUAMOS</h3>
+		<section class="animate__animated animate__fadeInDown animate__delay-7s" style="animation-duration: 0.5s !important">
+			<h1 class="text-center laranja-global mb-5">PRODUTOS</h1>
+			<div class="container position-relative mb-5">
+				<div class="row">
+					<div class="col-12 contato-b text-center rounded-5 p-3 m-0">
+						<h3 class="m-0"><?= get_the_title() ?></h3>
 					</div>
-					<div class="col-12 col-md-6 text-center mt-5">
-						<p class="laranja-global">SOMOS UM CONGLOMERADO DE EMPRESAS ESPECIALIZADAS NA TECNOLOGIA DE CRIAR E FABRICAR CONDUTORES, QUE TRANSPORTAM ENERGIA ELÉTRICA E INFORMAÇÃO</p>
-					</div>
-					<div class="col-12 col-md-6 text-center mt-5 d-flex justify-content-center">
-						<!-- <img style="width: 400px;" src="https://mddweb.com.br/aprova/global/wp-content/uploads/2024/07/cobre.png" alt="" srcset=""> -->
-
-						<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width: 500px;">
-							<div class="carousel-inner" >
-								<div class="carousel-item active">
-									<img src="https://mddweb.com.br/aprova/global/wp-content/uploads/2024/07/cobre.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="https://mddweb.com.br/aprova/global/wp-content/uploads/2024/07/cobre.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="https://mddweb.com.br/aprova/global/wp-content/uploads/2024/07/cobre.png" class="d-block w-100" alt="...">
-								</div>
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="visually-hidden">Next</span>
-							</button>
+					<div class="col-12 row justify-content-center gap-4 align-items-center">
+						<div class="col-12 col-md-3">
+							<img class="w-100 mt-5 mb-5" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/cobreflex.png" alt="" srcset="">
 						</div>
 					</div>
-					<!-- <div class="col-12 text-center">
-						<img style="filter:invert()" src="http://localhost/global/wp-content/uploads/2024/07/atuamos-bottom.png" alt="" srcset="">
-					</div> -->
+					<div class="text-cont mb-5">
+						<div class="row justify-content-center">
+							<div class="col-md-10 col-12">
+								<p class="m-3 text-center">A <b class="laranja-global">Cobreflex</b> é uma empresa brasileira com mais de 10 anos de experiência na fabricação de fios e cabos elétricos de alta qualidade, atendendo diretamente aos principais setores. produtos utilizados na geração e transmissão de energia, garantindo segurança e eficiência. </p>
+								<p class="mt-5 text-center"><b class="laranja-global">Conheça alguns dos nossos produtos:</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="prod-cont mb-5 mt-5">
+						<div class="row">
+							<div class="col-md-4 col-12">
+								<div class="h-100 d-flex flex-column text-center bd-or">
+									<div class="img-prod">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
+									</div>
+									<p class="mb-3"><b class="laranja-global">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+								</div>
+							</div>
+							<div class="col-md-4 col-12">
+								<div class="h-100 d-flex flex-column text-center bd-or">
+									<div class="img-prod">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
+									</div>
+									<p class="mb-3"><b class="laranja-global">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+								</div>
+							</div>
+							<div class="col-md-4 col-12">
+								<div class="h-100 d-flex flex-column text-center bd-or">
+									<div class="img-prod">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
+									</div>
+									<p class="mb-3"><b class="laranja-global">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- <div class="bg-bee-grey-left">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
-				</div>
-				<div class="bg-bee-grey-right">
-					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
-				</div> -->
 			</div>
+			<!-- <div class="bg-bee-grey-left">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
+			</div>
+			<div class="bg-bee-grey-right">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
+			</div> -->
 		</section>
 
+		<style>
+			.img-prod {
+				height: 220px;
+				display: flex;
+				align-items: center;
+			}
+
+			.img-prod>img {
+				width: 100%;
+				/* object-fit: contain; */
+			}
+		</style>
 		<script>
 			const favos = document.querySelectorAll('.favo');
 			const favosText = document.querySelectorAll('.favo-text');

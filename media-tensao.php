@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: Produtos
+ * Template name: Media Tensao
  *
  */
 
@@ -140,59 +140,57 @@ get_header(); ?>
 			.contato-b {
 				background-color: #1a2952;
 			}
+			.bd-or {
+				border: 5px solid orange;
+			}
 		</style>
 
 		<?php get_template_part('content', 'menu'); ?>
 
 		<section class="animate__animated animate__fadeInDown animate__delay-7s" style="animation-duration: 0.5s !important">
-			<h1 class="text-center laranja-global mb-5"><?= get_the_title() ?></h1>
+			<h1 class="text-center laranja-global mb-5">PRODUTOS</h1>
 			<div class="container position-relative mb-5">
 				<div class="row">
 					<div class="col-12 contato-b text-center rounded-5 p-3 m-0">
-						<h3 class="m-0">CABOS DE REDE</h3>
+						<h3 class="m-0"><?= get_the_title() ?></h3>
 					</div>
 					<div class="col-12 row justify-content-center gap-4 align-items-center">
-						<div class="col-12 col-md-4">
-							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/cobreflex.png" alt="" srcset="">
-						</div>
-						<div class="col-12 col-md-4">
-							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/conduspar.png" alt="" srcset="">
-						</div>
-						<div class="col-12 col-md-4">
-							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/dipro.png" alt="" srcset="">
+						<div class="col-12 col-md-3">
+							<img class="w-100 mt-5 mb-5" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>empresas/cobreflex.png" alt="" srcset="">
 						</div>
 					</div>
 					<div class="text-cont mb-5">
 						<div class="row justify-content-center">
-							<div class="col-md-10 col-12 mb-5">
-								<p class="m-3 text-center">A Cobreflex é uma empresa brasileira com mais de 10 anos de experiência na fabricação de fios e cabos elétricos de alta qualidade, atendendo diretamente aos principais setores. produtos utilizados na geração e transmissão de energia, garantindo segurança e eficiência. </p>
+							<div class="col-md-10 col-12">
+								<p class="m-3 text-center">A <b class="laranja-global">Cobreflex</b> é uma empresa brasileira com mais de 10 anos de experiência na fabricação de fios e cabos elétricos de alta qualidade, atendendo diretamente aos principais setores. produtos utilizados na geração e transmissão de energia, garantindo segurança e eficiência. </p>
+								<p class="mt-5 text-center"><b class="laranja-global">Conheça alguns dos nossos produtos:</b></p>
 							</div>
 						</div>
 					</div>
-					<div class="prod-cont mb-5">
+					<div class="prod-cont mb-5 mt-5">
 						<div class="row">
 							<div class="col-md-4 col-12">
-								<div class="bg-white h-100 d-flex flex-column text-center p-2 rounded-3">
+								<div class="h-100 d-flex flex-column text-center bd-or">
 									<div class="img-prod">
 										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
 									</div>
-									<p class="mb-3"><b class="text-black">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+									<p class="mb-3"><b class="laranja-global">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
 								</div>
 							</div>
 							<div class="col-md-4 col-12">
-								<div class="bg-white h-100 d-flex flex-column text-center p-2 rounded-3">
+								<div class="h-100 d-flex flex-column text-center bd-or">
 									<div class="img-prod">
 										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
 									</div>
-									<p class="mb-3"><b class="text-black">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+									<p class="mb-3"><b class="laranja-global">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
 								</div>
 							</div>
 							<div class="col-md-4 col-12">
-								<div class="bg-white h-100 d-flex flex-column text-center p-2 rounded-3">
+								<div class="h-100 d-flex flex-column text-center bd-or">
 									<div class="img-prod">
 										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>prod1.png" alt="" srcset="">
 									</div>
-									<p class="mb-3"><b class="text-black">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
+									<p class="mb-3"><b class="laranja-global">CABO COBREFLEX HEPRATOX 90°C-0,6-1KV</b></p>
 								</div>
 							</div>
 						</div>
