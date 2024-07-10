@@ -206,7 +206,7 @@ get_header(); ?>
 							<div class="hidden-empresa col-12 col-md-6 text-center mh" style="overflow: hidden;transition: 1s">
 
 								<h3 class="laranja-global mb-4"><?= the_title() ?></h3>
-								<div class="col-md-6 col-12">
+								<div class="col-md-8  col-12">
 									<div id="carousel-post<?php echo get_the_ID();?>" class="carousel slide w-100">
 										<div class="carousel-indicators">
 											<button type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -224,14 +224,14 @@ get_header(); ?>
 												<img src="<?php the_post_thumbnail_url() ?>" class="d-block w-100" alt="...">
 											</div>
 										</div>
-										<button class="carousel-control-prev" type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide="prev">
+										<!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide="prev">
 											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Previous</span>
 										</button>
 										<button class="carousel-control-next" type="button" data-bs-target="#carousel-post<?php echo get_the_ID();?>" data-bs-slide="next">
 											<span class="carousel-control-next-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Next</span>
-										</button>
+										</button> -->
 
 									</div>
 								</div>
