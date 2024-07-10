@@ -215,12 +215,12 @@ get_header(); ?>
 					wp_reset_postdata(); ?>
 
 				</div>
-				<div class="bg-bee-grey-left">
+				<!-- <div class="bg-bee-grey-left">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
 				</div>
 				<div class="bg-bee-grey-right">
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' ?>bg-bee-removebg-preview.png" alt="" srcset="">
-				</div>
+				</div> -->
 			</div>
 		</section>
 
